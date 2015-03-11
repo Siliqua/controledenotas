@@ -12,7 +12,7 @@ Recursos: Python v.2.7 e framework Django v.1.5.
 
 **Equipe:**
 - Crescêncio Lima (product owner) [**cretchas**](https://github.com/cretchas)
-- Breno Lessa (scrum master) [**brenolessa**](https://github.com/brenolessa)
+- Breno Lessa (Scrum Master) [**brenolessa**](https://github.com/brenolessa)
 - Dhiego Morais [**dhiegomorais**] (https://github.com/DhiegoMorais)
 - Hugo Brito [**hugobrito**](https://github.com/huggobrito)
 - Maiane Salomão [**maisalomao**](https://github.com/Maiane)
