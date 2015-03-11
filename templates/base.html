@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{% load staticfiles %}
+		<link rel="stylesheet" type="text/css" href="{% static 'medias/css/bootstrap.css' %}" />
+  		<script src="{% static 'medias/js/bootstrap.js' %}"></script>
+		<!-- <meta http-equiv='refresh' content='1'> -->
+    	<title>{% block head_title %}Controle de Notas - SLQA{% endblock %}</title>
+	</head>
+	<body>
+		<div class="navbar navbar-inverse navbar-fixed-top ">
+   			 <div class="navbar-inner">
+   				<p class="brand">SILIQUA [SLQA]</p>
+   			 </div>
+		</div>
+    
+		<div class="container">
+			<div class="row-fluid">
+    
+        	<h1 class="page-header">{% block title %}Controle de notas | Equipe SLQA{% endblock %}</h1>
+        	{% block content %}
+        	{% endblock %}
+        	</div>
+		</div>
+
+		<footer class="row"></footer>
+	</body>
+</html>

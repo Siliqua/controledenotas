@@ -1,0 +1,75 @@
+<meta charset="UTF-8">
+<style type="text/css">
+    table {
+  max-width: 100%;
+  background-color: transparent;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.table th,
+.table td {
+  padding: 8px;
+  line-height: 20px;
+  text-align: left;
+  vertical-align: top;
+  border-top: 1px solid #dddddd;
+}
+
+.table th {
+  font-weight: bold;
+}
+
+.table thead th {
+  vertical-align: bottom;
+}
+
+.table-condensed th,
+.table-condensed td {
+  padding: 4px 5px;
+}
+
+
+.color{
+      background-color: #16a085;
+      color: #FFFFFF;
+}
+
+
+
+</style>
+{% extends 'base.html' %}
+{% block title %}<p style="font-size:20px" align="center">Relatório de Notas - SLQA</p>{% endblock %}
+{% block content %}
+     <table class="table table-condesed">            
+        <thead>
+              <tr>
+                <th class="color" align="left" style="font-size:15px">Disciplina</th>
+                <th class="color" align="left" style="font-size:15px">I unidade</th>
+                <th  class="color"align="left" style="font-size:15px">II unidade</th>
+                <th  class="color"align="left" style="font-size:15px">III unidade</th>
+                <th  class="color"align="left" style="font-size:15px">Média</th>
+              </tr>
+            </thead>
+            </div>
+            </div>
+            <tbody>
+            {% for disciplina in disciplinas %}
+
+            <tr>
+                <td align="left" style="font-size:15px">{{ disciplina.nome }}</td>
+                <td align="left" style="font-size:15px">{{ disciplina.nota1 }}</td>
+                <td align="left" style="font-size:15px">{{ disciplina.nota2 }}</td>
+                <td align="left" style="font-size:15px">{{ disciplina.nota3 }}</td>
+                <td align="left" style="font-size:15px">{{ disciplina.getMedia }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+          </table>    
+    <br><br>
+{% endblock %}

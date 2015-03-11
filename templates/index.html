@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h1>{% block title %}Controle de Notas - SLQA{% endblock %}</h1>
+
+{% block content %}
+     <table class="table table-bordered ">
+            <thead >
+              <tr >
+                <th>Disciplinas</th>
+                <th>I unidade</th>
+                <th>II unidade</th>
+                <th>III unidade</th>
+                <th>Editar</th>
+                <th>Excluir</th>
+              </tr>
+            </thead>
+            <tbody>
+            {% for disciplina in disciplinas %}
+
+            <tr>
+                <td>
+                    <a href="/editar/{{ disciplina.id }}/">
+                    {{ disciplina.nome }}
+                    </a>
+                </td>
+
+                <td>{{ disciplina.nota1 }}</td>
+                <td>{{ disciplina.nota2 }}</td>
+                <td>{{ disciplina.nota3 }}</td>
+
+
+                <td>
+                    <a href="/editar/{{ disciplina.id }}/"><i class="icon-pencil"></i></a>
+                </td>
+                <td>
+                    <a href="/excluir/{{ disciplina.id }}/"><i class="icon-trash"></i></a>
+                </td>
+                {% empty %}
+                <td>
+                  Não existem disciplinas cadastradas.
+                </td>
+            </tr>
+            {% endfor %}
+            </tbody>
+          </table>
+    <br><br>
+
+            
+    
+<div class="spam3">
+    <div class="well sidebar-nav">
+    <a class="nav-header" href="/adicionar/"><i class="icon-plus"></i> Adicionar Disciplina</a>
+    <a class="nav-header" href="/gerarpdf/"><i class="icon-file"></i> Gerar Relatório em PDF</a>
+{% endblock %}
+            </div>
+         </div>    
+</body>
+</html>

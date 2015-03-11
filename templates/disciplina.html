@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}Disciplina{% endblock %}
+{% block content %}
+
+<div class="container-fluid">  
+    <div class="hero-unit text-center"> 
+    <form action="" method="POST">{% csrf_token %}
+
+      {{ form.as_p }}
+
+
+      <label>Média:</label>
+      <input type="number" value="{{disciplina.getMedia}}" readonly/><br>
+        <input type="submit" value="Gravar"  class="btn btn-primary"/>
+    </form>
+</div>
+</div>
+
+{% endblock %}
