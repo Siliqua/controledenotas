@@ -3,6 +3,10 @@
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
+import os
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+
+
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
 )
@@ -12,7 +16,7 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'C:/Users/Breno/PycharmProjects/controledenotas/medias.sqlite3.db',                      # Or path to database file if using sqlite3.
+        'NAME': os.path.join(BASE_DIR, 'medias.sqlite3.db'), # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
         'USER': '',
         'PASSWORD': '',
